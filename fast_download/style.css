@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #b7b7b7;
+  font-weight: 100;
+  max-width: 50em;
+  margin: 0 auto;
+  font-family: "Kaushan Script", cursive;
+}
+
+div:focus {
+  outline: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #b7b7b7;
+  margin: 1em 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #595959;
+}
+
+#title {
+  font-weight: 600;
+  font-size: 48px;
+  padding-top: 30px;
+}
+
+#content {
+  font-size: 25px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+#content[contenteditable="true"]:empty::before {
+  content: attr(placeholder);
+  color: #4d4d4d;
+}
+
+#content[smol] {
+  font-size: 20px;
+}
+
+#title[contenteditable="true"]:empty::before {
+  content: attr(placeholder);
+  color: #4d4d4d;
+}
+
+#title[medium] {
+  font-size: 38px;
+}
+
+#title[extramedium] {
+  font-size: 27px;
+}
+
+#header {
+  font-size: 20px;
+  font-weight: 100;
+  color: #4d4d4d;
+  white-space: nowrap;
+}
+
+#header[save] {
+  font-size: 23px;
+  color: #ffd13c;
+  margin-left: 450px;
+}
+
+#header[big] {
+  font-size: 30px;
+  color: #4c4c4c;
+}
+
+#header[big]:hover {
+  color: #262626;
+}
+
+#header:hover {
+  color: #404040;
+}
+
+hr[space] {
+  border-top: 0px solid white;
+}
+
+.tabfocused {
+  text-indent: 40px;
+}
+
+.tab {
+  text-indent: 0px;
+}
+
+.tab::focus {
+  text-indent: 40px;
+}
